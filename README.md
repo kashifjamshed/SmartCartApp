@@ -15,7 +15,7 @@ Step 2: Backend Setup
 
 
 Step 3: Frontend Setup
-- cd smartcart-frontend
+- cd smartcart.frontend
 - Run npm install
 - npm start
 
