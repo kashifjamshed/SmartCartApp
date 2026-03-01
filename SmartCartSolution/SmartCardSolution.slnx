@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SmartCart.Backend/SmartCart.Backend.csproj" />
+  <Project Path="SmartCart.Backend.Tests/SmartCart.Backend.Tests.csproj" />
+</Solution>
