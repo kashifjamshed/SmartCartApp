@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #0d9488;
+  --color-primary-hover: #0f766e;
+  --color-primary-light: #ccfbf1;
+  --color-accent: #f59e0b;
+  --color-accent-hover: #d97706;
+  --color-surface: #f0f0f0;
+  --color-background: #e5e5e5;
+  --color-background-alt: #dcdcdc;
+  --color-text: #2d2d2d;
+  --color-text-muted: #5a5a5a;
+  --color-border: #c4c4c4;
+  --color-error: #dc2626;
+  --color-success: #059669;
+  --shadow-sm: 0 1px 2px rgba(13, 148, 136, 0.06);
+  --shadow-md: 0 4px 12px rgba(13, 148, 136, 0.1);
+  --shadow-lg: 0 10px 40px rgba(13, 148, 136, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #e5e5e5;
+  min-height: 100vh;
+  color: var(--color-text);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
