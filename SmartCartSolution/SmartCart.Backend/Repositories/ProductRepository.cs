@@ -20,8 +20,12 @@ public class ProductRepository : IProductRepository
             new() { Id = 2, Name = "Gaming Desktop", Price = 600m, Stock = 30 },
             new() { Id = 3, Name = "PS5 Console", Price = 1200m, Stock = 25 },
             new() { Id = 4, Name = "Monitor", Price = 400m, Stock = 40 },
-            new() { Id = 5, Name = "Television", Price = 800m, Stock = 20 }
+            new() { Id = 5, Name = "Television", Price = 800m, Stock = 20 },
+            new() { Id = 6, Name = "Washing Machine", Price = 1200m, Stock = 15 },
+            new() { Id = 7, Name = "Refrigerator", Price = 1500m, Stock = 10 },
+            new() { Id = 8, Name = "Oven", Price = 800m, Stock = 20 }
         };
+
         foreach (var p in items)
             _products[p.Id] = p;
     }

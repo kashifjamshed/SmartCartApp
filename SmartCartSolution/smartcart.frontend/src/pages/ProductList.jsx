@@ -53,12 +53,22 @@ export default function ProductList() {
 
   return (
     <div className="page product-list-page">
-      <ul className="product-list">
+      <div className="product-grid">
         {products.map((p) => (
-          <li key={p.id} className="product-item">
-            <span className="product-name">{p.name}</span>
-            <span className="product-price">₹{p.price.toFixed(2)}</span>
-            <span className="product-stock">Stock: {p.stock}</span>
+          <div key={p.id} className="product-card">
+            <img
+              src={`/images/${encodeURIComponent(
+                p.name
+                  .toLowerCase() 
+              )}.jpg`}
+              alt={p.name}
+              className="product-image"
+            />
+            <div className="product-info">
+              <span className="product-name">{p.name}</span>
+              <span className="product-price">₹{p.price.toFixed(2)}</span>
+              <span className="product-stock">Stock: {p.stock}</span>
+            </div>
             <button
               type="button"
               className="btn-add"
@@ -67,9 +77,9 @@ export default function ProductList() {
             >
               {addingId === p.id ? "Adding…" : "Add to Cart"}
             </button>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
