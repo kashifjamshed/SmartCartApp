@@ -39,8 +39,9 @@ public class CartService : ICartService
         Cart cart;
         if (request.CartId.HasValue && request.CartId.Value != Guid.Empty)
         {
-            cart = _cartRepository.GetById(request.CartId.Value) ?? _cartRepository.Create(); // Stale/invalid cart id (e.g. after restart) → create new cart
+            cart = _cartRepository.GetById(request.CartId.Value) ?? _cartRepository.Create();
         }
+
         else
         {
             cart = _cartRepository.Create();
@@ -48,6 +49,7 @@ public class CartService : ICartService
 
         var existing = cart.Items.FirstOrDefault(x => x.ProductId == request.ProductId.Value);
         var newQty = (existing?.Quantity ?? 0) + request.Quantity.Value;
+
         if (product.Stock < newQty)
             return ServiceResult<AddCartItemResponse>.ConflictResult("Insufficient stock.");
 
@@ -165,6 +167,7 @@ public class CartService : ICartService
         _cartRepository.Update(cart);
         return ServiceResult.SuccessResult();
     }
+
 
     public ServiceResult<OrderResponse> Checkout(Guid cartId)
     {

@@ -28,6 +28,7 @@ public class OrderService : IOrderService
                 Quantity = i.Quantity,
                 LineTotal = i.LineTotal
             }).ToList(),
+
             Subtotal = order.Subtotal,
             Discount = order.Discount,
             Tax = order.Tax,

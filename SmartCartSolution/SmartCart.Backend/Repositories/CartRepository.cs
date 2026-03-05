@@ -5,7 +5,7 @@ namespace SmartCart.Backend.Repositories;
 
 public class CartRepository : ICartRepository
 {
-    private readonly ConcurrentDictionary<Guid, Cart> _carts = new();
+    private readonly Dictionary<Guid, Cart> _carts = new();
 
     public Cart? GetById(Guid id) => _carts.TryGetValue(id, out var cart) ? cart : null;
 

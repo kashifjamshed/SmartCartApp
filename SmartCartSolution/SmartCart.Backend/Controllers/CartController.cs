@@ -15,6 +15,7 @@ public class CartController : ControllerBase
         _cartService = cartService;
     }
 
+
     [HttpPost("items")]
     public IActionResult AddItem([FromBody] AddCartItemRequest request)
     {
@@ -34,6 +35,7 @@ public class CartController : ControllerBase
 
         return Ok(result.Data);
     }
+
 
     [HttpPut("{cartId:guid}/items/{productId:int}")]
     public IActionResult UpdateItem(Guid cartId, int productId, [FromBody] UpdateCartItemRequest request)
@@ -71,6 +73,7 @@ public class CartController : ControllerBase
         return Ok(cart);
     }
 
+
     [HttpPost("{cartId:guid}/apply-coupon")]
     public IActionResult ApplyCoupon(Guid cartId, [FromBody] ApplyCouponRequest request)
     {
@@ -84,6 +87,7 @@ public class CartController : ControllerBase
 
         return Ok();
     }
+
 
     [HttpPost("{cartId:guid}/checkout")]
     public IActionResult Checkout(Guid cartId)

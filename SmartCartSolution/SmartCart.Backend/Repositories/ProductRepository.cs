@@ -5,7 +5,7 @@ namespace SmartCart.Backend.Repositories;
 
 public class ProductRepository : IProductRepository
 {
-    private readonly ConcurrentDictionary<int, Product> _products = new();
+    private readonly Dictionary<int, Product> _products = new();
 
     public ProductRepository()
     {

@@ -6,4 +6,5 @@ public class ApplyCouponRequest
 {
     [Required]
     public string? Code { get; set; }
+
 }

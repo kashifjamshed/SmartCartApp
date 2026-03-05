@@ -17,5 +17,6 @@ public class ProductService : IProductService
         return _productRepository.GetAll()
             .Select(p => new ProductDto { Id = p.Id, Name = p.Name, Price = p.Price, Stock = p.Stock })
             .ToList();
+
     }
 }

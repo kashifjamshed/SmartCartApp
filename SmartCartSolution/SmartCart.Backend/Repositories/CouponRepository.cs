@@ -5,7 +5,7 @@ namespace SmartCart.Backend.Repositories;
 
 public class CouponRepository : ICouponRepository
 {
-    private readonly ConcurrentDictionary<string, Coupon> _coupons = new(StringComparer.OrdinalIgnoreCase);
+    private readonly Dictionary<string, Coupon> _coupons = new(StringComparer.OrdinalIgnoreCase);
 
     public CouponRepository()
     {

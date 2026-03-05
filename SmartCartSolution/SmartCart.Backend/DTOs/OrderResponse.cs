@@ -9,6 +9,7 @@ public class OrderResponse
     public decimal Tax { get; set; }
     public decimal GrandTotal { get; set; }
     public string? AppliedCouponCode { get; set; }
+
 }
 
 public class OrderItemDto
@@ -18,4 +19,5 @@ public class OrderItemDto
     public decimal UnitPrice { get; set; }
     public int Quantity { get; set; }
     public decimal LineTotal { get; set; }
+
 }
